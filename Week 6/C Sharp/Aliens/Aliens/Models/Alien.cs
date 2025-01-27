@@ -42,6 +42,14 @@ namespace Aliens.Models
         {
             //TODO: Implement the method
             /*Reduces the alien health by 1. Minimum Alien health should 0.*/
+            if (!Dead) {
+                Health = Health - 1;
+                Console.WriteLine($"Alien health has decreased by 1 {Health}");
+            }
+            else
+            {
+                Console.WriteLine("Alien is already dead and cannot be hit");  
+            }
         }
 
         public void Miss()
