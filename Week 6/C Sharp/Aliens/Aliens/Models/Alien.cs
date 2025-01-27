@@ -31,6 +31,10 @@ namespace Aliens.Models
         {
             //TODO: Implement the method
             /*Set dodging to true if the alien is alive*/
+            if (!Dead)
+            {
+                Dodging = true;
+            }
 
         }
 
