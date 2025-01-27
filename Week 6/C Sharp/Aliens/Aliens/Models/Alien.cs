@@ -18,7 +18,10 @@ namespace Aliens.Models
         public Alien(bool dodging, int alienHealth)
         {
             //TODO: Construct the Alien object and initialise the data members appropriately.
-
+            /*Initialise the data members with the values passed as arguments*/
+            Dodging = dodging;
+            Health = alienHealth;
+            Dead = alienHealth == 0;
         }
 
         // Methods
