@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Aliens.Models
 {
-    internal class Raygun
+    public class Raygun
     {
         // Properties
         
@@ -19,8 +19,18 @@ namespace Aliens.Models
 
         public Raygun(int mChrg, int cChrg)
         {
-            //TODO: Construct the Raygun object and initialise the attributes
+         
+            MaxCharge = mChrg; 
+            CurrentCharge = cChrg; 
+
+            
+            if (CurrentCharge > MaxCharge)
+            {
+                CurrentCharge = MaxCharge;
+            }
         }
+
+        
 
         // Methods
         //TODO: Implement appropriate getters and setters for the class
@@ -41,14 +51,14 @@ namespace Aliens.Models
 
         public bool IsCharged()
         {
-            //TODO: Implement the method
+            return CurrentCharge > 0;
             /*Returns true if the gun has a charge*/
 
         }
 
         public bool IsFullyCharged()
         {
-            //TODO: Implement the method
+            return CurrentCharge == MaxCharge;
             /*Returns true if the gun is fully charged*/
         }
 

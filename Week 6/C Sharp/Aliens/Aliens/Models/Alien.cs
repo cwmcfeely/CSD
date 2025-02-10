@@ -7,7 +7,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Aliens.Models
 {
-    internal class Alien
+    public class Alien
     {
         // Properties
         public bool Dead { get; set; }
@@ -54,7 +54,7 @@ namespace Aliens.Models
 
         public void Miss()
         {
-            //TODO: Implement the method
+            Dodging = false;
             /*Sets dodging to false*/
 
         }
